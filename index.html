@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>LGBTIQ Friendly Borders</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&key=<google maps api key>"></script> 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="main.js" id="script"></script>
+</head>
+<body onload="initialize();">
+	<div class="content">
+		<div id='MicrosoftTranslatorWidget' class='Dark' style='color:white;background-color:#555555'></div>
+		<img src="http://i.imgur.com/rCYsNtI.png">
+		<div id="map_canvas"></div>
+		<div id="visualization" style="width: 500px"></div>
+		<div id="switch">
+			<button id="left"><b>Events</b></button>
+			<button id="right"><b>Articles</b></button>
+		</div>
+		<iframe id="articles" src="https://76crimes.com" width=1000 height=2000 scrolling="no" frameBorder="0"></iframe>
+		<div class="footer">
+			<div id="legend">
+				<br/>
+				<b>Risk Level</b>
+				<br/>
+				<br/>
+				<p> Death Penalty: </p><div class='color_1'>__</div>
+				<p> Imprisonment: </p><div class='color_2'>__</div>
+				<p> Freedom of Expression Limits: </p><div class='color_3'>__</div>
+				<p> LGBTIQ Friendly: </p><div class='color_4'>__</div>
+			</div>
+			<br/>
+			<p>Please select a country to learn more about LGBTIQ events taking place and news related to risks or rights issues.</p>
+		</div>
+	</div>
+</body>
+<script type='text/javascript'>
+	setTimeout(function(){
+		{
+			var s=document.createElement('script');
+			s.type='text/javascript';
+			s.charset='UTF-8';
+			s.src=((location && location.href && location.href.indexOf('https') == 0)
+				?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')
+				+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=False&ui=true&settings=Manual&from=';
+			var p=document.getElementsByTagName('head')[0]||document.documentElement;
+			p.insertBefore(s,p.firstChild);
+		}
+	},0);
+</script>
+<script src="https://websdk.live.gotoassist.com/concierge.min.js"></script>
+<script>
+    concierge.setApplicationKey("<concierge application key>");
+    concierge.addDefaultButton("Need Help? Contact Support Services");
+</script>
+</html>

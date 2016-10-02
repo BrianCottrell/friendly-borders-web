@@ -1,0 +1,86 @@
+#articles {
+  display: none;
+}
+body {
+/*  background-image: url(http://i.imgur.com/ykwFrnY.jpg);*/
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+.color_1 {
+  display: inline;
+  margin-right: 16px;
+  color: #FF6666;
+  background-color: #FF6666;
+}
+.color_2 {
+  display: inline;
+  margin-right: 16px;
+  color: #AAAA33;
+  background-color: #AAAA33;
+}
+.color_3 {
+  display: inline;
+  margin-right: 16px;
+  color: #99CC44;
+  background-color: #99CC44;
+}
+.color_4 {
+  display: inline;
+  color: #00FF66;
+  background-color: #00FF66;
+}
+.content {
+  width: 100%;
+  text-align: center;
+/*  opacity: 0.8;*/
+}
+.footer {
+  position: relative;
+  width: 1000px;
+  margin: auto;
+  margin-top: -15px;
+  padding-bottom: 10px;
+  background-color: #f1f1f1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+iframe {
+  margin-top: -300px;
+}
+#left {
+  position: absolute;
+  height: 45px;
+  width: 490px;
+  left: 0px;
+  font-size: 24px;
+}
+#legend {
+  width: 100%;
+}
+#map_canvas {
+  height: 600px;
+  width: 980px;
+  margin: auto;
+  border: 10px solid #f1f1f1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+p {
+  display: inline;
+}
+#right {
+  position: absolute;
+  height: 45px;
+  width: 490px;
+  left: 490px;
+  font-size: 24px;
+}
+#switch {
+  position: relative;
+  height: 45px;
+  width: 980px;
+  margin: auto;
+  border-bottom: 10px solid #f1f1f1;
+  border-left: 10px solid #f1f1f1;
+  border-right: 10px solid #f1f1f1;
+}
