@@ -6,6 +6,11 @@ body {
   font-size: 18px;
   font-family: Arial, sans-serif;
 }
+button {
+  height: 20px;
+  width: 190px;
+  overflow: hidden;
+}
 .color_1 {
   display: inline;
   margin-right: 16px;
@@ -32,7 +37,10 @@ body {
 .content {
   width: 100%;
   text-align: center;
-/*  opacity: 0.8;*/
+}
+.flight {
+  position: absolute;
+  display: block;
 }
 .footer {
   position: relative;
@@ -45,7 +53,9 @@ body {
   border-bottom-right-radius: 5px;
 }
 iframe {
-  margin-top: -300px;
+  margin-top: -340px;
+  border-left: 13px solid #f1f1f1;
+  border-right: 13px solid #f1f1f1;
 }
 #left {
   position: absolute;
