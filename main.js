@@ -17,6 +17,7 @@ function openIW(FTevent) {
   // infoWindow.setContent(FTevent.infoWindowHtml);
   // infoWindow.setPosition(FTevent.latLng);
   var button;
+  var city;
   var code = FTevent.row['adm0_a3'].value.substr(0,2);
   var color = FTevent.row['map_color'].value;
   var content;
@@ -85,8 +86,20 @@ function openIW(FTevent) {
           flights.innerHTML = 'Book a flight to ' + FTevent.row['admin'].value;
           flights.classList.add('flight');
         }
+        var reg = /^[a-z]+$/i;
+        city = airports[i].name;
+        if (city.indexOf(' ') > 0) {
+          city = city.slice(0, airports[i].name.indexOf(' '))
+        }
+        if (city.indexOf('-') > 0) {
+          city = city.slice(0, airports[i].name.indexOf('-'))
+        }
+        if (city.indexOf(',') > 0) {
+          city = city.slice(0, airports[i].name.indexOf(','))
+        }
+        console.log(city);
         link = document.createElement('a');
-        link.href = 'https://flights.airberlin.com/en-US/flights-to-melbourne';
+        link.href = 'https://flights.airberlin.com/en-US/flights-to-' + city;
         button = document.createElement('button');
         button.innerHTML = airports[i].name;
         link.appendChild(button);
@@ -103,9 +116,9 @@ function openIW(FTevent) {
       element.childNodes[2].style.top = (-1 * height) + 'px';
       element = element.childNodes[0];
       element.childNodes[1].style.top = (-10 - height) + 'px';
-      element.childNodes[1].style.height = (parseInt(element.childNodes[1].style.height.slice(0, -2)) + height + 10) + 'px';
+      element.childNodes[1].style.minHeight = (parseInt(element.childNodes[1].style.height.slice(0, -2)) + height + 10) + 'px';
       element.childNodes[3].style.top = (-10 - height) + 'px';
-      element.childNodes[3].style.height = (parseInt(element.childNodes[3].style.height.slice(0, -2)) + height + 10) + 'px';
+      element.childNodes[3].style.minHeight = (parseInt(element.childNodes[3].style.height.slice(0, -2)) + height + 10) + 'px';
     }
   }
 }
