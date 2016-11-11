@@ -97,7 +97,6 @@ function openIW(FTevent) {
         if (city.indexOf(',') > 0) {
           city = city.slice(0, airports[i].name.indexOf(','))
         }
-        console.log(city);
         link = document.createElement('a');
         link.href = 'https://flights.airberlin.com/en-US/flights-to-' + city;
         button = document.createElement('button');
